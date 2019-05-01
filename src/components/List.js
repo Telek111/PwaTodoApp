@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import _ from 'lodash';
-import ListItem from './ListItem';
+import ListItemContainer from '../containers/ListItemContainer';
 
-import './style.css';
+import './style.scss';
 
 class List extends Component {
   state = {
@@ -50,7 +50,7 @@ class List extends Component {
   renderToDo() {
     const {data} = this.props;
     const toDos = _.map(data, (value, key) => {
-      return <ListItem key={key} todoId={key} todo={value} />;
+      return <ListItemContainer key={key} todoId={key} todo={value} />;
     });
     if (!_.isEmpty(toDos)) {
       return toDos;
