@@ -1,5 +1,5 @@
 {
-  "name": "firedux-todo",
+  "name": "Todo-App",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -28,5 +28,13 @@
   ],
   "eslintConfig": {
     "extends": "react-app"
-  }
+  },
+  "devDependencies": {
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.12.1",
+    "enzyme-to-json": "^3.3.5"
+  },
+  "jest": {
+    "snapshotSerializers": ["enzyme-to-json/serializer"]
+  }  
 }
