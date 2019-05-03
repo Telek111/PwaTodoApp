@@ -12,9 +12,8 @@ const router = new Router()
 
 app.use(Helmet())
 
-if (process.env.NODE_ENV === 'development') {
-  app.use(Logger())
-}
+app.use(Logger())
+
 
 app.use(Cors())
 app.use(BodyParser({
@@ -36,8 +35,8 @@ app.use(router.allowedMethods())
 app.use(require('koa-static')('./build'))
 
 
-mongoose.connect(process.env.DB_PATH, { useNewUrlParser: true }).then((mongo) => {
-  debug('connected to mongo db')
+mongoose.connect('mongodb://127.0.0.1:27017/koa-test', { useNewUrlParser: true }).then((mongo) => {
+  console.log('connected to mongo DB')
 }).catch((err) => {
   console.log('Failed to connect to databse', { error: err })
 })
