@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List renders without crashing 1`] = `
+<div
+  className="to-do-list-container"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="col s10 offset-s1 center-align"
+    >
+      <h4>
+        You have no more things ToDo!
+      </h4>
+    </div>
+  </div>
+  <div
+    className="fixed-action-btn"
+  >
+    <button
+      className="btn-floating btn-large black darken-4"
+      onClick={[Function]}
+    >
+      <i
+        className="large material-icons"
+      >
+        +
+      </i>
+    </button>
+  </div>
+</div>
+`;
