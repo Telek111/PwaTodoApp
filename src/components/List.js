@@ -38,6 +38,7 @@ class List extends Component {
                 onChange={this.inputChange}
                 id="toDoNext"
                 type="text"
+                className="inputForm"
               />
               <label htmlFor="toDoNext">What Next?</label>
             </div>
@@ -73,7 +74,7 @@ class List extends Component {
         <div className="fixed-action-btn">
           <button 
             onClick={() => this.setState({showForm: !showForm})}
-            className="btn-floating btn-large black darken-4"
+            className="btn-floating btn-large black darken-4 toggle-btn"
           >
             {showForm ? (
               <i className="large material-icons">-</i>
